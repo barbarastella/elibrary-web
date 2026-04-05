@@ -1,7 +1,7 @@
 import { Container, Row, Col, Card, Table } from 'react-bootstrap';
 
 const Sobre = () => (
-    <Container className="mt-4">
+    <Container className="mt-4 text-danger">
 
         <Row className="mb-4">
             <Col>

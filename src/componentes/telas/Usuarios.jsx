@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { listarUsuarios, criarUsuario, atualizarUsuario, removerUsuario, obterUsuario } from "../../servicos/UsuarioServico.jsx";
 import { listarLeituras } from "../../servicos/LeituraServico.jsx";
-import { Card, Button, Form, Modal } from "react-bootstrap";
+import { Card, Button, Modal } from "react-bootstrap";
 import Dialogo from "../comuns/Dialogo.jsx";
 import FormularioUsuario from "../comuns/FormularioUsuario.jsx";
 import { getUsuario } from '../../seguranca/Auth.jsx';
@@ -202,8 +202,9 @@ function Usuarios() {
                                                     </div>
 
                                                     <div className="mb-3">
-                                                        <span className={`badge ${l.status === 'read' ? 'bg-success' : l.status === 'reading' ? 'bg-warning' : 'bg-info'}`}>
-                                                            {l.status === 'read' ? 'Lido' : l.status === 'reading' ? 'Lendo' : 'Quero ler'}
+                                                        {console.log(l)}
+                                                        <span className={`badge ${l.status === 'lido' ? 'bg-success' : l.status === 'lendo' ? 'bg-warning' : 'bg-info'}`}>
+                                                            {l.status === 'lido' ? 'Lido' : l.status === 'lendo' ? 'Lendo' : 'Quero ler'}
                                                         </span>
                                                     </div>
 

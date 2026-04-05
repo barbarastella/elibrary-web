@@ -99,7 +99,7 @@ function Home() {
             )}
 
             <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
-                {livros.map(livro => (
+                {livros?.map(livro => (
                     <div className="col" key={livro.id}>
                         <Card className="card-custom h-100 fade-in-up">
                             <Card.Body className="card-body-custom d-flex flex-column">
@@ -161,7 +161,7 @@ function Home() {
                                         onChange={(e) => setForm({ ...form, author_id: Number(e.target.value) })}
                                         required>
                                         <option value="">Selecione um autor...</option>
-                                        {autores.map(a => <option key={a.id} value={a.id}>{a.name}</option>)}
+                                        {autores?.map(a => <option key={a.id} value={a.id}>{a.name}</option>)}
                                     </Form.Select>
                                 </Form.Group>
                             </div>
